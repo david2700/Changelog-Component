@@ -79,15 +79,35 @@ header {
 }
 
 @media (max-width: 678px) {
+
     .changelog-item {
         flex-direction: column;
+        gap: 1rem;
+        margin-right: 0;
     }
 
     .changelog-date {
-        padding: 0 3rem;
+        padding: 0 0 0 ;
+        margin-left: 25px;
+    }
+
+    .changelog-text::before {
+        margin-right: 20px;
     }
 
     .changelog-timeline::before {
-        left: 50px; 
+        left: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .changelog-item {
+        font-size: 0.9rem;
+        margin-left: 0;
+        gap: 0.8rem;
+    }
+
+    .changelog-timeline::before {
+        left: 16px;
     }
 }
