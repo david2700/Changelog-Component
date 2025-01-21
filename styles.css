@@ -56,7 +56,7 @@ header {
 .changelog-timeline {
     position: relative;
     padding: 10px;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .changelog-timeline::before {
@@ -76,6 +76,10 @@ header {
     background-color: var(--background-color);
     padding: 0.8rem 3rem;
     border-radius: 13px;
+}
+
+ footer {
+    margin-bottom: 4rem;
 }
 
 @media (max-width: 678px) {
