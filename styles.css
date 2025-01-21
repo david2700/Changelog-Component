@@ -22,36 +22,35 @@ header {
     text-align: center;
 }
 
-.left-side-divider {
-    text-align: right;
-    width: 45%;
-    border: 1px solid red;
-    display: inline-block;
-}
-
 .subtitle {
     color: var(--accent);
 }
 
 .changelog-item {
     margin: 2rem;
+    display: flex;
+    gap: 2rem;
 }
 
 
-.changelog-circle {
+.changelog-text::before {
+    content: "";
     height: 15px;
     width: 15px;
-    position: absolute;
     background-color: var(--background-color);
     border-radius: 10px;
     display: inline-block;
-    left: 200px;
+    margin-right:40px;
+}
+
+.changelog-text {
+    flex-grow: 2;
 }
 
 .changelog-date {
     color: var(--accent);
+    width: 150px;
     text-align: right;
-    margin-right: 5rem;
 }
 
 .changelog-timeline {
@@ -64,7 +63,7 @@ header {
     content: '';
     position: absolute;
     top: 0;
-    left: 207px; /* Align line with circles */
+    left: 231px; /* Align line with circles */
     width: 2px;
     height: 100%;
     background: #000;
@@ -79,6 +78,16 @@ header {
     border-radius: 13px;
 }
 
-.flex {
-    display: flex;
+@media (max-width: 678px) {
+    .changelog-item {
+        flex-direction: column;
+    }
+
+    .changelog-date {
+        padding: 0 3rem;
+    }
+
+    .changelog-timeline::before {
+        left: 50px; 
+    }
 }
